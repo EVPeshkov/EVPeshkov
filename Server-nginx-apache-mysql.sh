@@ -21,7 +21,7 @@ mysql --execute="create user replica@'80.78.243.9' identified if 'caching_sha2_p
 mysql --execute="grant replication slave on *.* to replica@'80.78.243.9';"
 
 #Installing and configuring agents
-apt install prometheus-node-exporter prometheus-apache-exporter prometheus-mysqld-exporter -y
+apt install prometeheus prometheus-node-exporter prometheus-apache-exporter prometheus-mysqld-exporter -y
 systemctl enable --now prometheus-node-exporter
 systemctl enable --now prometheus-apache-exporter
 systemctl enable --now prometheus-mysqld-exporter
