@@ -16,7 +16,7 @@ service apache2 restart
 apt install mysql-server -y
 systemctl enable mysql.service
 cp /etc/mysql/mysql.conf.d/mysqld.conf /etc/mysql/mysql.conf.d/mysqld.conf.bak
-cp ./ap-ng-mysql-config /etc/mysql/mysql.conf.d/mysqld.conf
+cp /ap-ng-mysql-config /etc/mysql/mysql.conf.d/mysqld.conf
 mysql --execute="create user replica@'80.78.243.9' identified if 'caching_sha2_password' BY 'OtusPeshkov24';"
 mysql --execute="grant replication slave on *.* to replica@'80.78.243.9';"
 
